@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cores em CSS com Libras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Estilo geral do corpo da página */
+    body {
+      margin: 0; /* Remove margens padrão */
+      font-family: 'Segoe UI', sans-serif; /* Define a fonte */
+      /* Fundo com gradiente suave cinza claro para branco */
+      background: linear-gradient(180deg, #e3eaf2 0%, #ffffff 100%);
+      display: flex; /* Usa flexbox para layout vertical */
+      flex-direction: column; /* Organiza os filhos em coluna */
+      align-items: center; /* Centraliza horizontalmente */
+      min-height: 100vh; /* Altura mínima da tela */
+      color: #333; /* Cor padrão do texto */
+    }
+
+    /* Menu de navegação (navbar) */
+    .navbar {
+      width: 100%; /* Barra ocupa toda a largura */
+      background-color: #333; /* Fundo escuro */
+      display: flex; /* Flex para alinhar links em linha */
+      padding: 10px 20px; /* Espaço interno */
+      gap: 20px; /* Espaço entre os links */
+      box-sizing: border-box; /* Inclui padding no cálculo da largura */
+      position: sticky; /* Fixa a navbar no topo ao rolar */
+      top: 0;
+      z-index: 1000; /* Para ficar sobre outros elementos */
+    }
+
+    /* Estilo dos links da navbar */
+    .navbar a {
+      color: white; /* Cor branca do texto */
+      text-decoration: none; /* Remove sublinhado */
+      padding: 12px 16px; /* Espaço clicável maior */
+      font-size: 16px; /* Tamanho da fonte */
+      border-radius: 4px; /* Bordas arredondadas */
+      transition: background-color 0.3s ease; /* Transição suave para hover */
+    }
+
+    /* Efeito ao passar o mouse */
+    .navbar a:hover {
+      background-color: #555; /* Fundo cinza escuro */
+    }
+
+    /* Container da tabela de cores */
+    .tabela-cores {
+      width: 95%; /* Ocupa 95% da largura disponível */
+      max-width: 1000px; /* Limita largura máxima */
+      background: white; /* Fundo branco */
+      border-radius: 12px; /* Bordas arredondadas */
+      box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra leve */
+      padding: 30px; /* Espaço interno */
+      margin-top: 20px; /* Espaço acima da tabela */
+      box-sizing: border-box; /* Padding incluído na largura */
+      color: #333; /* Cor do texto */
+    }
+
+    /* Cada linha da tabela usando grid */
+    .linha {
+      display: grid; /* Ativa grid layout */
+      grid-template-columns: 80px 1fr 200px; /* Colunas: bloco cor, descrição, vídeo */
+      align-items: center; /* Alinha verticalmente ao centro */
+      gap: 20px; /* Espaço entre colunas */
+      padding: 15px 0; /* Espaço vertical interno */
+      border-bottom: 1px solid #eee; /* Linha separadora clara */
+    }
+
+    /* Remove a linha inferior da última linha */
+    .linha:last-child {
+      border-bottom: none;
+    }
+
+    /* Quadrado com cor */
+    .cor-bloco {
+      width: 60px; /* Largura fixa */
+      height: 60px; /* Altura fixa */
+      border-radius: 8px; /* Cantos arredondados */
+      border: 2px solid #ccc; /* Borda cinza clara */
+    }
+
+    /* Texto da descrição da cor */
+    .descricao {
+      font-size: 18px; /* Fonte maior */
+    }
+
+    /* Estilo para código CSS das cores */
+    code {
+      background: #eee; /* Fundo cinza claro */
+      padding: 2px 6px; /* Espaçamento interno */
+      border-radius: 5px; /* Cantos arredondados */
+      font-size: 14px; /* Fonte menor */
+    }
+
+    /* Vídeo dos sinais em Libras */
+    video {
+      width: 200px; /* Largura fixa para vídeos */
+      height: auto; /* Altura automática para manter proporção */
+      border-radius: 8px; /* Cantos arredondados */
+      display: block; /* Remove espaçamento extra */
+    }
+
+    /* Título principal */
+    h1 {
+      text-align: center; /* Centraliza o texto */
+      margin-bottom: 30px; /* Espaço abaixo do título */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação com links -->
+  <nav class="navbar" role="menubar" aria-label="Menu principal">
+    <a href="html.html" role="menuitem" tabindex="0">HTML</a>
+    <a href="css.html" role="menuitem" tabindex="0">CSS</a>
+    <a href="php.html" role="menuitem" tabindex="0">PHP</a>
+    <a href="banco.html" role="menuitem" tabindex="0">Banco de Dados</a>
+  </nav>
+
+  <!-- Container da tabela com cores e vídeos -->
+  <div class="tabela-cores">
+    <h1>Cores em CSS com Libras</h1>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:red;"></div>
+      <div class="descricao">Vermelho <code>red</code></div>
+      <video src="videos/red.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:blue;"></div>
+      <div class="descricao">Azul <code>blue</code></div>
+      <video src="videos/blue.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:green;"></div>
+      <div class="descricao">Verde <code>green</code></div>
+      <video src="videos/green.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:yellow;"></div>
+      <div class="descricao">Amarelo <code>yellow</code></div>
+      <video src="videos/yellow.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:orange;"></div>
+      <div class="descricao">Laranja <code>orange</code></div>
+      <video src="videos/orange.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:purple;"></div>
+      <div class="descricao">Roxo <code>purple</code></div>
+      <video src="videos/purple.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:brown;"></div>
+      <div class="descricao">Marrom <code>brown</code></div>
+      <video src="videos/brown.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:pink;"></div>
+      <div class="descricao">Rosa <code>pink</code></div>
+      <video src="videos/pink.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:black;"></div>
+      <div class="descricao">Preto <code>black</code></div>
+      <video src="videos/black.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:white;"></div>
+      <div class="descricao">Branco <code>white</code></div>
+      <video src="videos/white.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <div class="linha">
+      <div class="cor-bloco" style="background:gray;"></div>
+      <div class="descricao">Cinza <code>gray</code></div>
+      <video src="videos/gray.mp4" autoplay loop muted playsinline></video>
+    </div>
+  </div>
+
+</body>
+</html>

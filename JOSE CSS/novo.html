@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bandeira do Brasil</title>
+  <style>
+    body {
+      margin: 0;
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .bandeira {
+      position: relative;
+      width: 480px;
+      height: 320px;
+      background-color: #009b3a; /* verde */
+      overflow: hidden;
+    }
+
+    .losango {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 340px;
+      height: 340px;
+      background-color: #ffdf00; /* amarelo */
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .circulo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 160px;
+      height: 160px;
+      background-color: #002776; /* azul */
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    
+
+    .texto {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: sans-serif;
+      letter-spacing: 1px;
+      z-index: 2;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="bandeira">
+    <div class="losango"></div>
+    <div class="circulo"></div>
+    <div class="faixa"></div>
+    <div class="texto">DOOM</div>
+  </div>
+</body>
+</html>
