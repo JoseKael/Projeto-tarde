@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Básico com Libras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #e3eaf2 0%, #ffffff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    /* Navbar padrão estilosa */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 20px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 12px rgba(24, 40, 72, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .nav-link {
+      color: #e0e7ff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    .nav-link:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .nav-link {
+        font-size: 16px;
+        padding: 12px 24px;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+    }
+
+    /* Conteúdo */
+    .container {
+      width: 95%;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      margin: 25px 0 50px;
+      box-sizing: border-box;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #182848;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #4b6cb7;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    video {
+      display: block;
+      margin: 15px auto 30px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(24,40,72,0.3);
+    }
+
+    /* Seção propriedades CSS com grid */
+    .prop-linha {
+      display: grid;
+      grid-template-columns: 140px 1fr 180px;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .prop-linha:last-child {
+      border-bottom: none;
+    }
+
+    .prop-box {
+      font-family: monospace;
+      font-size: 18px;
+      background: #f0f4ff;
+      color: #4b6cb7;
+      text-align: center;
+      padding: 8px 12px;
+      border-radius: 8px;
+      user-select: all;
+    }
+
+    .prop-desc {
+      font-size: 16px;
+    }
+
+    .faq-item {
+      margin-bottom: 25px;
+    }
+
+    .faq-question {
+      font-weight: 700;
+      font-size: 17px;
+      color: #4b6cb7;
+    }
+
+    .faq-answer {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .internal-link {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #4b6cb7;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(75,108,183,0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    .internal-link:hover,
+    .internal-link:focus {
+      background-color: #3a549b;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" role="menubar" aria-label="Menu principal">
+    <a href="html.html" role="menuitem" tabindex="0" class="nav-link">💻 HTML</a>
+    <a href="css.html" role="menuitem" tabindex="0" class="nav-link">🎨 CSS</a>
+    <a href="php.html" role="menuitem" tabindex="0" class="nav-link">🐘 PHP</a>
+    <a href="banco.html" role="menuitem" tabindex="0" class="nav-link">🗄 Banco de Dados</a>
+  </nav>
+
+  <main class="container">
+    <h1>CSS Básico com Libras</h1>
+
+    <!-- Vídeo explicando o sinal de CSS -->
+    <video src="videos/css_sign.mp4" autoplay loop muted playsinline controls></video>
+
+    <p>
+      CSS é a linguagem usada para deixar as páginas da internet bonitas e organizadas. Ela controla cores, fontes, tamanhos, espaçamentos e muito mais.
+    </p>
+
+    <!-- Vídeo explicando o que é CSS -->
+    <video src="videos/css_explanation.mp4" autoplay loop muted playsinline controls></video>
+
+    <h2>Propriedades CSS importantes</h2>
+
+    <div class="prop-linha">
+      <div class="prop-box">color</div>
+      <div class="prop-desc">Define a cor do texto</div>
+      <video src="videos/prop_color.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <div class="prop-linha">
+      <div class="prop-box">background-color</div>
+      <div class="prop-desc">Define a cor de fundo</div>
+      <video src="videos/prop_background_color.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <div class="prop-linha">
+      <div class="prop-box">font-size</div>
+      <div class="prop-desc">Define o tamanho da fonte</div>
+      <video src="videos/prop_font_size.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <div class="prop-linha">
+      <div class="prop-box">margin</div>
+      <div class="prop-desc">Espaçamento externo</div>
+      <video src="videos/prop_margin.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <div class="prop-linha">
+      <div class="prop-box">padding</div>
+      <div class="prop-desc">Espaçamento interno</div>
+      <video src="videos/prop_padding.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <h2>Dúvidas comuns</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Posso usar várias propriedades CSS juntas?</div>
+      <div class="faq-answer">
+        Sim! Você pode usar muitas propriedades para controlar o visual da página.
+      </div>
+      <video src="videos/faq_multiple_properties.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">O que é a diferença entre margin e padding?</div>
+      <div class="faq-answer">
+        Margin é o espaço fora do elemento, padding é o espaço dentro do elemento.
+      </div>
+      <video src="videos/faq_margin_padding.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+
+    <a href="cores.html" class="internal-link" tabindex="0">🌈 Veja a página de cores</a>
+
+  </main>
+
+</body>
+</html>
