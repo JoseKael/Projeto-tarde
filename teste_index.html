@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprendendo Programação com Libras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #f5f5f5; }
+    header { background: #333; color: white; padding: 20px; text-align: center; }
+    nav a { margin: 0 10px; color: white; text-decoration: none; }
+    section { padding: 20px; background: white; margin: 20px; border-radius: 8px; }
+    .cor { display: flex; align-items: center; margin-bottom: 10px; }
+    .bloco { width: 60px; height: 60px; margin-right: 20px; border-radius: 8px; border: 2px solid #ccc; }
+    .descricao { flex: 1; }
+    .libras-gif { width: 80px; height: auto; margin-left: 20px; }
+    code { background: #eee; padding: 2px 6px; border-radius: 5px; }
+    .memoria { display: grid; grid-template-columns: repeat(4, 100px); gap: 10px; }
+    .card { background: #ddd; height: 100px; text-align: center; padding-top: 35px; font-size: 20px; cursor: pointer; border-radius: 8px; }
+    .editor { background: #272822; color: white; padding: 10px; border-radius: 8px; }
+    .editor textarea { width: 100%; height: 150px; font-family: monospace; background: #1e1e1e; color: #00ff00; border: none; padding: 10px; }
+    .preview { background: white; border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Site de Programação com Libras</h1>
+    <nav>
+      <a href="#cores" accesskey="1">Cores</a>
+      <a href="#quiz" accesskey="2">Quiz</a>
+      <a href="#editor" accesskey="3">Editor</a>
+      <a href="#memoria" accesskey="4">Memória</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cores">
+      <h2>Cores com Libras</h2>
+      <!-- Lista de cores ampliada -->
+      <div class="cor"><div class="bloco" style="background:red;"></div> <div class="descricao">Vermelho <code>red</code></div><img src="img/vermelho.gif" class="libras-gif" alt="Sinal vermelho em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:blue;"></div> <div class="descricao">Azul <code>blue</code></div><img src="img/azul.gif" class="libras-gif" alt="Sinal azul em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:green;"></div> <div class="descricao">Verde <code>green</code></div><img src="img/verde.gif" class="libras-gif" alt="Sinal verde em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:yellow;"></div> <div class="descricao">Amarelo <code>yellow</code></div><img src="img/amarelo.gif" class="libras-gif" alt="Sinal amarelo em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:orange;"></div> <div class="descricao">Laranja <code>orange</code></div><img src="img/laranja.gif" class="libras-gif" alt="Sinal laranja em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:purple;"></div> <div class="descricao">Roxo <code>purple</code></div><img src="img/roxo.gif" class="libras-gif" alt="Sinal roxo em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:brown;"></div> <div class="descricao">Marrom <code>brown</code></div><img src="img/marrom.gif" class="libras-gif" alt="Sinal marrom em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:pink;"></div> <div class="descricao">Rosa <code>pink</code></div><img src="img/rosa.gif" class="libras-gif" alt="Sinal rosa em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:black;"></div> <div class="descricao">Preto <code>black</code></div><img src="img/preto.gif" class="libras-gif" alt="Sinal preto em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:white;"></div> <div class="descricao">Branco <code>white</code></div><img src="img/branco.gif" class="libras-gif" alt="Sinal branco em Libras"></div>
+      <div class="cor"><div class="bloco" style="background:gray;"></div> <div class="descricao">Cinza <code>gray</code></div><img src="img/cinza.gif" class="libras-gif" alt="Sinal cinza em Libras"></div>
+    </section>
+
+    <section id="quiz">
+      <h2>Quiz com Libras</h2>
+      <p>Qual cor está sendo sinalizada?</p>
+      <video src="videos/vermelho.mp4" width="200" controls></video>
+      <form>
+        <label><input type="radio" name="resposta"> Azul</label><br>
+        <label><input type="radio" name="resposta"> Vermelho</label><br>
+        <label><input type="radio" name="resposta"> Verde</label>
+      </form>
+    </section>
+
+    <section id="editor">
+      <h2>Editor Visual</h2>
+      <div class="editor">
+        <textarea id="codigo" placeholder="Digite seu código HTML aqui...">
+<h1 style='color:blue;'>Olá mundo!</h1>
+        </textarea>
+        <button onclick="atualizarPreview()">Executar</button>
+        <div id="preview" class="preview"></div>
+      </div>
+    </section>
+
+    <section id="memoria">
+      <h2>Jogo da Memória: Sinais e Palavras</h2>
+      <div class="memoria" id="jogoMemoria"></div>
+    </section>
+  </main>
+
+  <script src="js/editor.js"></script>
+  <script src="js/memoria.js"></script>
+</body>
+</html>
